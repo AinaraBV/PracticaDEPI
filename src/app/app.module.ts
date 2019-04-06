@@ -1,11 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
 
 //Material theme imports
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatIcon } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+
+
+import { AppComponent } from './app.component';
+
+
 
 
 @NgModule({
@@ -16,7 +20,9 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule, 
-    MatCheckboxModule
+    MatInputModule,
+    MatSelectModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
