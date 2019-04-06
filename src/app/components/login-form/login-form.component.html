@@ -1,12 +1,31 @@
-<h1>Formulario de Acceso</h1>
+<mat-grid-list cols="2">
 
-<div class="example-container">
-  <mat-form-field>
-    <input matInput placeholder="Usuario">
-  </mat-form-field>
+  <mat-grid-tile style="background:cornflowerblue">ESTO ES LA COLUMNA DE LA DE IZQUIERDA</mat-grid-tile>
+  
+  <mat-grid-tile>
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
 
-  <mat-form-field>
-    <input matInput placeholder="Contraseña">
-  </mat-form-field>
+        <img mat-card-image style="width:200px;height:200px;" src="https://aumentada.net/wp-content/uploads/2015/05/user.png" alt="Imagen login">
 
-</div>
+        <mat-card-content>
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="Usuario">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Contraseña">
+            </mat-form-field>
+          </div>
+        </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-raised-button>Iniciar sesión</button>
+      </mat-card-actions>
+    </mat-card>
+</mat-grid-tile>
+
+</mat-grid-list>
