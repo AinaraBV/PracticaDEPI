@@ -1,36 +1,5 @@
-
-@include mat-core();
-
-$primary: mat-palette($mat-lime, 500);
-$accent:  mat-palette($mat-lime, 500, A200, A400);
-$warn:    mat-palette($mat-red, 500);
-
-$config: mat-typography-config();
-
-
-$theme: mat-light-theme($primary, $accent, $warn);
-
-@include angular-material-theme($theme);
-
-body {
-  font-family: mat-font-family($config);
-  font-weight: normal;
-}
-
-h1, h2, h3, h4 {
-  font-weight: normal;
-}
-
-.example-card {
-  max-width: 500px;
-}
-
-.example-container {
-  display: flex;
-  flex-direction: column;
-  margin-left: 30px;
-}
-
-.example-container > * {
-  width: 80%;
-}
+html, body {
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+  }
