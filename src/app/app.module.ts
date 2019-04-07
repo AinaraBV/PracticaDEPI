@@ -2,27 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
-//Material theme imports
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatIcon } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
 import { AppComponent } from './app.component';
-
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    MatButtonModule, 
-    MatInputModule,
-    MatSelectModule,
-    MatIconModule
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
