@@ -1,0 +1,39 @@
+.nav-item{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.icon-brand{
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    margin-top: -5px;
+}
+
+.vcenter{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hcenter{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+}
+
+.text-dropdown{
+    color: dimgray;
+    :hover{
+        color:red;
+    }
+}
+
+.modal-dialog.modal-notify.modal-danger .modal-header{
+    background-color: #2bbbad !important
+}
+
+.close-session{
+    margin-top: 15px;
+}

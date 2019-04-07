@@ -13,18 +13,22 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { LoginFormComponent } from './components/login-form/login-form.component';
-
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent
+    AppComponent,
     LoginFormComponent
   ],
   imports: [
     BrowserModule,
+    MDBBootstrapModule.forRoot()
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule, 
