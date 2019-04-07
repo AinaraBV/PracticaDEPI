@@ -22,3 +22,17 @@ body {
 h1, h2, h3, h4 {
   font-weight: normal;
 }
+
+.example-card {
+  max-width: 500px;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.example-container > * {
+  width: 80%;
+}
