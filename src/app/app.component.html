@@ -1,4 +1,5 @@
 
-<app-login-form></app-login-form>
+<!-- Si no está logueado-->
+<app-login-form *ngIf="!logueado"></app-login-form>
 
-<!--<app-navbar></app-navbar>-->
+<app-navbar *ngIf="logueado"></app-navbar>

@@ -1,85 +1,52 @@
-<header style="height: 100vh">
-  <section class="view" style="height: 100vh">
+<header style="height: 100vh" >
+  <section class="view" style="height: 100vh; background:url('../../../assets/layer.jpg'); background-size: cover">
       <div class="row" style="height: 100vh">
 
-        <div class="col-md-4" style="background-image:linear-gradient(to right, #2bbbad 0%, #1fc8db 51%, #2cb5e8 75%)">
+        <div class="col-md-4 side-login">
           <div class="d-flex flex-column justify-content-center align-items-center h-100">
             <h1 class="heading display-3">Farmadosis</h1>
             <h4 class="subheading font-weight-bold">Soluciones farmacológicas</h4>
           </div>
         </div>
   
-        <div class="col-md-8">
-  
-          <div class="view" style="height: 100vh">
+        <div class="col-md-8 side-right ">
 
-            <div class="row" style="height: 100vh">
+          <div class="offset-md-4 col-md-6 center-login mt-5">
+            <div class="card wow fadeIn " data-wow-delay="0.3s">
+              <div class="card-body">
 
-              <div class=" offset-md-4 col-md-6" style=" margin: 0 auto; display: flex; flex-direction: column; justify-content: center">
+                <!-- Header -->
+                <div class="form-header aqua-gradient">
+                  <h3 class="font-weight-500 my-2 py-1"> Inicio de sesión</h3>
+                </div>
 
-                <!-- Material form login -->
-                <div class="card" >
+                <!-- Body -->
+                <div class="md-form">
+                  <i class="fas fa-user prefix text-aqua"></i>
+                  <input type="text" id="orangeForm-email" class="form-control" mdbInput>
+                  <label for="orangeForm-email">Tu usuario</label>
+                </div>
 
-                    <h5 class="card-header info-color white-text text-center py-4">
-                      <strong>Iniciar Sesión</strong>
-                    </h5>
-                  
-                    <!--Card content-->
-                    <div class="card-body px-lg-5 pt-0">
-                  
-                      <!-- Form -->
-                      <form class="text-center" style="color: #757575;">
-                  
-                        <!-- Email -->
-                        <div class="md-form">
-                          <input type="email" id="materialLoginFormEmail" class="form-control">
-                          <label for="materialLoginFormEmail">E-mail</label>
-                        </div>
-                  
-                        <!-- Password -->
-                        <div class="md-form">
-                          <input type="password" id="materialLoginFormPassword" class="form-control">
-                          <label for="materialLoginFormPassword">Contraseña</label>
-                        </div>
-                  
-                        <div class="d-flex justify-content-around">
-                          <div>
-                            <!-- Remember me -->
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="materialLoginFormRemember">
-                              <label class="form-check-label" for="materialLoginFormRemember">Recuérdame</label>
-                            </div>
-                          </div>
-                          <div>
-                            <!-- Forgot password -->
-                            <a href="">¿Olvidaste la contraseña?</a>
-                          </div>
-                        </div>
-                  
-                        <!-- Sign in button -->
-                        <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Iniciar Sesión</button>
-                  
-                        <!-- Register -->
-                        <p>¿No tienes usuario?
-                          <br>
-                          <a href="">Ponte en contacto con el administrador</a>
-                        </p>
-                  
-                      </form>
-                      <!-- Form -->
-                  
-                    </div>
-                  
+                <div class="md-form">
+                  <i class="fas fa-lock prefix text-aqua"></i>
+                  <input type="password" id="orangeForm-pass" class="form-control" mdbInput>
+                  <label for="orangeForm-pass">Tu contraseña</label>
+                </div>
+
+                <div class="text-center">
+                  <button class="btn aqua-gradient btn-lg login-button" mdbWavesEffect>Iniciar Sesión</button>
+                  <hr class="mt-4">
+                  <div class="inline-ul text-center d-flex justify-content-center">
+                    <p class="grey-text">¿Has olvidado tu contraseña?<br>
+                      <a style="color:#2eaee9 !important"><b>Contacta con el administrador</b></a>
+                    </p>
                   </div>
-                  <!-- Material form login -->
+                </div>
+
               </div>
             </div>
-
           </div>
-  
         </div>
-  
       </div>
-  
     </section>
 </header>
