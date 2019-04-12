@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ResidenciasService, Residencia } from 'src/app/services/residencias.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class ListaResidenciasComponent implements OnInit {
 
   Residencias:Residencia[] = [];
 
-  constructor(private _residencias:ResidenciasService) { }
+  constructor(private _residencias:ResidenciasService, private route:Router) { }
 
   ngOnInit() {
     this.Residencias = this._residencias.getResidencias();
@@ -20,6 +21,11 @@ export class ListaResidenciasComponent implements OnInit {
   loadImage(res:Residencia){
     const styles = {'background-image' : 'url('+res.img+')'};
     return styles;
+  }
+
+  loadPacientes(res:Residencia) {
+    res.seleccionada = true;
+    this.route.navigate(['pacientes']);
   }
 
 }

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ListaResidenciasComponent } from './components/lista-residencias/lista-residencias.component'
+import { ListaPacientesComponent } from './components/lista-pacientes/lista-pacientes.component';
 
 //Rutas
 import { APP_ROUTING } from './routes/app.routes';
@@ -16,6 +17,7 @@ import { APP_ROUTING } from './routes/app.routes';
 //Servicios
 import { LoginService } from './services/login.service';
 import { ResidenciasService } from './services/residencias.service';
+import { PacientesService } from './services/pacientes.service';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { ResidenciasService } from './services/residencias.service';
     AppComponent,
     NavbarComponent,
     LoginFormComponent,
-    ListaResidenciasComponent
+    ListaResidenciasComponent,
+    ListaPacientesComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { ResidenciasService } from './services/residencias.service';
   ],
   providers: [
     LoginService,
-    ResidenciasService
+    ResidenciasService,
+    PacientesService
   ],
   bootstrap: [AppComponent]
 })

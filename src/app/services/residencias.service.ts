@@ -11,7 +11,8 @@ export class ResidenciasService {
             telefono: '925529089',
             email: 'ultimo.suspiro@gmail.com',
             numero: 145,
-            last_update: '3 horas'
+            last_update: '3 horas',
+            seleccionada: false,
         },
         {
             Nombre: "Nueva Juventud",
@@ -20,7 +21,8 @@ export class ResidenciasService {
             telefono: '956321984',
             email: 'nueva.juventud@gmail.com',
             numero: 213,
-            last_update: '15 horas'
+            last_update: '15 horas',
+            seleccionada: false,
         },
         {
             Nombre: "La Gran Retirada",
@@ -29,7 +31,8 @@ export class ResidenciasService {
             telefono: '958743625',
             email: 'gran.retirada@gmail.com',
             numero: 95,
-            last_update: '2 días'
+            last_update: '2 días',
+            seleccionada: false,
         },
         {
             Nombre: "El Remanso",
@@ -38,7 +41,8 @@ export class ResidenciasService {
             telefono: '914258736',
             email: 'el.remanso@gmail.com',
             numero: 320,
-            last_update: '40 minutos'
+            last_update: '40 minutos',
+            seleccionada: false,
         },
         {
             Nombre: "Abuelito Dime Tu",
@@ -47,7 +51,8 @@ export class ResidenciasService {
             telefono: '984236571',
             email: 'abuelito.dime.tu@gmail.com',
             numero: 83,
-            last_update: '5 días'
+            last_update: '5 días',
+            seleccionada: false,
         },
         {
             Nombre: "Buscando El Paraíso",
@@ -56,7 +61,8 @@ export class ResidenciasService {
             telefono: '966345524',
             email: 'buscando.paraiso@gmail.com',
             numero: 124,
-            last_update: '3 minutos'
+            last_update: '3 minutos',
+            seleccionada: false,
         }
     ]
 
@@ -64,6 +70,17 @@ export class ResidenciasService {
 
     getResidencias():Residencia[]{
         return this.residencias;
+    }
+
+    getResidenciaSeleccionada():Residencia{
+
+        for(let i = 0; i<this.residencias.length; i++){
+            if(this.residencias[i].seleccionada==true){
+                return this.residencias[i]
+            }
+        }
+
+        return null;
     }
 }
 
@@ -75,4 +92,5 @@ export interface Residencia{
     email:String;
     numero:Number;
     last_update:String;
+    seleccionada:boolean;
 }
