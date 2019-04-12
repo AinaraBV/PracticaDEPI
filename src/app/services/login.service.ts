@@ -7,7 +7,7 @@ export class LoginService {
         {
           Nombre: "Miguel",
           Apellidos: "De Arriba Moreno",
-          img: "../../../assets/Miguel.jpg",
+          img: "../../../assets/Users/Miguel.jpg",
           usuario: "migueldam",
           pwd: "123456",
           rol: "Farmaceutico",
@@ -16,7 +16,7 @@ export class LoginService {
         {
           Nombre: "Ainara",
           Apellidos: "Del Barco Ventura",
-          img: "../../../assets/Ainara.jpg",
+          img: "../../../assets/Users/Ainara.jpg",
           usuario: "adelbarc",
           pwd: "123456",
           rol: "Médico",
@@ -24,9 +24,7 @@ export class LoginService {
         }
     ]
     
-    constructor() { 
-        console.log("Servicio de login")
-    }
+    constructor() { }
 
     getUsers():User[]{
         return this.users;

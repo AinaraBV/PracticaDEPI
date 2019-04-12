@@ -17,7 +17,8 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column; 
-  justify-content: center
+  justify-content: center;
+  height: 100vh;
 }
 
 .form-header {
@@ -37,7 +38,7 @@
 }
 
 .wow{
-  background-color:rgba(229,228,255,.90);
+  background-color:rgba(245, 245, 255, 0.7);
   margin-top:30px
 }
 
@@ -48,7 +49,7 @@
 }
 
 .login-button{
-  :hover{
+  &:hover{
     color:grey !important;
   }
 }

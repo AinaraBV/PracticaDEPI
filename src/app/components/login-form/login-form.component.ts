@@ -34,9 +34,16 @@ export class LoginFormComponent implements OnInit {
     });
 
     if (login_success){
-      this.route.navigate(['paciente']);
+      this.route.navigate(['residencias']);
+    } else {
+      document.getElementById("openModalButton").click();
     }
-
   }
+
+  onClose(event: any) {
+    this.user = '';
+    this.pwd = '';
+  }
+
 
 }

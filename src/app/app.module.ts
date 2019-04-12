@@ -3,24 +3,27 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
+
 //Componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { ListaResidenciasComponent } from './components/lista-residencias/lista-residencias.component'
 
 //Rutas
 import { APP_ROUTING } from './routes/app.routes';
-import { PacienteComponent } from './components/paciente/paciente.component'
 
 //Servicios
-import { LoginService } from './services/login.service'
+import { LoginService } from './services/login.service';
+import { ResidenciasService } from './services/residencias.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginFormComponent,
-    PacienteComponent
+    ListaResidenciasComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { LoginService } from './services/login.service'
     APP_ROUTING
   ],
   providers: [
-    LoginService
+    LoginService,
+    ResidenciasService
   ],
   bootstrap: [AppComponent]
 })

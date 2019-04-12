@@ -11,7 +11,7 @@
   
         <div class="col-md-8 side-right ">
 
-          <div class="offset-md-4 col-md-6 center-login mt-5">
+          <div class="offset-md-4 col-md-6 center-login">
             <div class="card wow fadeIn " data-wow-delay="0.3s">
               <div class="card-body">
 
@@ -49,3 +49,34 @@
       </div>
     </section>
 </header>
+
+<button id="openModalButton" type="button" [hidden]="true" mdbBtn color="primary" class="waves-light" data-toggle="modal" data-target="#basicExample"
+  (click)="frame.show()" mdbWavesEffect>Launch Modal</button>
+
+<div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true" (close)="onClose($event)">
+  <div class="modal-dialog modal-md modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Login</p>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="row">
+          <i class="fas fa-times fa-4x animated rotateIn col-md-3"></i>
+          <h4 class="col-md-9" style="text-align:left; margin:0px">Usuario o contraseña incorrecta</h4>
+        </div>
+        
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" mdbBtn color="danger" class="waves-effect" mdbWavesEffect data-dismiss="modal" (click)="frame.hide()">Ok</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
