@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService, User } from '../../services/login.service'
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login-form',
@@ -7,9 +10,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginFormComponent implements OnInit {
 
-  constructor() { }
+  users:User[] = [];
+
+  user:string = '';
+  pwd:string = '';
+
+
+  constructor(private _loginService:LoginService, private route:Router) { }
 
   ngOnInit() {
+    this.users = this._loginService.getUsers();
+  }
+
+  login(){
+
+    let login_success = false;
+    //Miramos si coincide y lo ponemos logueado a true
+    this.users.forEach(user => {
+      if(user.usuario == this.user && user.pwd == this.pwd){
+        user.sesion = true;
+        login_success = true;
+      }
+    });
+
+    if (login_success){
+      this.route.navigate(['paciente']);
+    }
+
   }
 
 }

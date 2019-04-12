@@ -23,18 +23,18 @@
                 <!-- Body -->
                 <div class="md-form">
                   <i class="fas fa-user prefix text-aqua"></i>
-                  <input type="text" id="orangeForm-email" class="form-control" mdbInput>
+                  <input type="text" id="orangeForm-email" class="form-control"  [(ngModel)]="user" mdbInput>
                   <label for="orangeForm-email">Tu usuario</label>
                 </div>
 
                 <div class="md-form">
                   <i class="fas fa-lock prefix text-aqua"></i>
-                  <input type="password" id="orangeForm-pass" class="form-control" mdbInput>
+                  <input type="password" id="orangeForm-pass" class="form-control"  [(ngModel)]="pwd" mdbInput>
                   <label for="orangeForm-pass">Tu contraseña</label>
                 </div>
 
                 <div class="text-center">
-                  <button class="btn aqua-gradient btn-lg login-button" mdbWavesEffect>Iniciar Sesión</button>
+                  <button (click)="login()" class="btn aqua-gradient btn-lg login-button" mdbWavesEffect>Iniciar Sesión</button>
                   <hr class="mt-4">
                   <div class="inline-ul text-center d-flex justify-content-center">
                     <p class="grey-text">¿Has olvidado tu contraseña?<br>
@@ -42,7 +42,6 @@
                     </p>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
