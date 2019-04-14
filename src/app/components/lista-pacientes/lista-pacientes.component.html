@@ -26,7 +26,7 @@
           <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-4" mdbWavesEffect (click)="sortBy('Changed')">
             <mdb-icon fas icon="sort" class="mr-1"></mdb-icon> Ordenar Cambios 
           </button>
-          <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-4" mdbWavesEffect>
+          <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-4" disabled mdbWavesEffect>
             <mdb-icon fas icon="plus" class="mr-1"></mdb-icon> Añadir Paciente
           </button>
         </div>
@@ -64,8 +64,7 @@
                 <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.Inicio_toma}}</td>
                 <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.Fin_toma}}</td>
                 <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">
-                  <button mdbBtn color="default" outline="true" size="sm" mdbWavesEffect type="button" class="m-1">Eliminar</button>
-                  <button mdbBtn color="default" outline="true" size="sm" mdbWavesEffect type="button" class="m-0">Eliminar</button>
+                  <button mdbBtn color="default" size="sm" rounded="true" gradient="aqua" mdbWavesEffect type="button" class="m-0" (click)="removePaciente(el)"><mdb-icon fas icon="trash-alt"></mdb-icon></button>
                 </td>
               </tr>
             </tbody>

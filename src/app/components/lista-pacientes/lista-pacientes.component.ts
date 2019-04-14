@@ -74,4 +74,9 @@ export class ListaPacientesComponent implements OnInit {
     this.route.navigate(['residencias']);
   }
 
+
+  removePaciente(paciente:Paciente){
+    this._pacientes.removeOne(paciente);
+  }
+
 }

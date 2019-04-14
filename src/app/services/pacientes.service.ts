@@ -711,6 +711,15 @@ export class PacientesService {
     getPacientes():Paciente[]{
         return this.pacientes;
     }
+
+    removeOne(p:Paciente):Boolean{
+        var idx = this.pacientes.indexOf(p)
+        if (idx != -1) {
+            this.pacientes.splice(idx, 1);
+            return true;
+        }
+        return false;
+    }
 }
 
 

@@ -6,7 +6,7 @@ import { ListaPacientesComponent } from '../components/lista-pacientes/lista-pac
 const APP_ROUTES: Routes = [
     { path: 'pacientes', component: ListaPacientesComponent},
     { path: 'residencias', component: ListaResidenciasComponent},
-    { path: 'login', component: LoginFormComponent },
+    { path: '', component: LoginFormComponent },
     { path: '**', pathMatch:'full', redirectTo: '' }
 ];
 
