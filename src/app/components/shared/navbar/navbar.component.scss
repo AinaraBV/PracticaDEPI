@@ -1,0 +1,42 @@
+.nav-item{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.icon-brand{
+    color: white !important;
+}
+
+.vcenter{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hcenter{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+}
+
+.text-dropdown{
+    color: dimgray;
+    :hover{
+        color:rgb(59, 39, 39);
+    }
+}
+
+.modal-dialog.modal-notify.modal-danger .modal-header{
+    background-color: #2bbbad !important
+}
+
+.close-session{
+    margin-top: 15px;
+}
+
+.aqua-gradient {
+	background: -webkit-linear-gradient(50deg,#2bbbad,#2eaee9) !important;
+	background: -o-linear-gradient(50deg,#2bbbad,#2eaee9) !important;
+	background: linear-gradient(40deg,#2bbbad,#2eaee9) !important;
+}
