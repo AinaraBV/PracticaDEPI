@@ -76,11 +76,25 @@ export class ResidenciasService {
 
         for(let i = 0; i<this.residencias.length; i++){
             if(this.residencias[i].seleccionada==true){
-                return this.residencias[i]
+                return this.residencias[i];
             }
         }
 
         return null;
+    }
+
+    getResidenciaByName(nombre: string): Residencia[]{    
+        nombre = nombre.toLowerCase();
+
+        let residenciasArr: Residencia[] = [];
+
+        for(let i=0; i<this.residencias.length; i++){
+            if(this.residencias[i].Nombre.toLowerCase().indexOf(nombre) >= 0){
+                residenciasArr.push(this.residencias[i]);
+            }
+        }
+
+        return residenciasArr;
     }
 }
 

@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 
-<div class="container" style="margin-top:120px">
+<div class="container  animated fadeIn fast" style="margin-top:60px">
 
 
   <div class="row pt-4">
@@ -36,15 +36,14 @@
       <div class="card-header" role="tab" id="headingTratamiento">
         <a data-toggle="collapse" href="#collapseTratamiento" aria-expanded="true"
           aria-controls="collapseTratamiento">
-          <h5 class="mb-0">
-            Panel de tratamiento <i class="fas fa-angle-down rotate-icon"></i>
+          <h5 class="mb-0" style="color:#2bbbad">
+            <b>Panel de tratamiento</b> <i class="fas fa-angle-down rotate-icon"></i>
           </h5>
         </a>
       </div>
 
       <!-- Card body -->
-      <div id="collapseTratamiento" class="collapse show" role="tabpanel" aria-labelledby="headingTratamiento"
-        data-parent="#accordionEx">
+      <div id="collapseTratamiento" class="collapse show" role="tabpanel" aria-labelledby="headingTratamiento">
         <div class="card-body">
           <div class="row">
 
@@ -53,7 +52,7 @@
               <div class="row">
 
                 <!-- Nombre y tipo de toma-->
-                <div class="col-md-5">
+                <div class="col-md-4 ml-3">
                   <div class="md-form">
                     <input mdbInput type="text" id="inputNombre" class="form-control" value = "{{paciente.Nombre}} {{paciente.Apellidos}}" disabled>
                     <label for="inputNombre" class="">Nombre</label>
@@ -66,7 +65,7 @@
                 </div>
 
                 <!-- Fechas de inicio y fin -->
-                <div class="col-md-5">
+                <div class="col-md-4 ml-3">
                   <div class="md-form">
                     <input mdbInput type="text" id="inputInicioToma" class="form-control" disabled value="{{paciente.Inicio_toma}}">
                     <label for="inputInicioToma" class="">Inicio de toma</label>
@@ -79,16 +78,16 @@
                 </div>
 
                 <!-- Chechbox -->
-                <div class="col-md-2 align-self-center">
-                  <div class="custom-control custom-checkbox mb-5">
-                    <input type="checkbox" class="custom-control-input" id="chbxEmblistable" disabled checked>
-                    <label class="custom-control-label" for="chbxEmblistable">Emblistable</label>
-                  </div>
+                <div class="col-md-3 ml-3 align-self-center">
+                    <div class="form-check mb-5">
+                        <input type="checkbox" class="form-check-input" id="materialUnchecked" checked disabled>
+                        <label class="form-check-label ml-2" for="materialUnchecked">Emblistable</label>
+                    </div>
 
-                  <div class="custom-control custom-checkbox mt-5">
-                    <input type="checkbox" class="custom-control-input" id="chbxBolsaUnica" disabled>
-                    <label class="custom-control-label" for="chbxBolsaUnica">Bolsa única</label>
-                  </div>
+                    <div class="form-check mt-5">
+                        <input type="checkbox" class="form-check-input" id="materialUnchecked" disabled>
+                        <label class="form-check-label ml-2" for="materialUnchecked">Bolsa única</label>
+                    </div>
                 </div>
               </div>
 
@@ -108,7 +107,7 @@
               <div class="form-group green-border-focus">
                 <label for="textAreaNotas">Notas</label>
                 <textarea class="form-control" id="textAreaNotas" rows="8"
-                  style="resize: none; background: rgb(201, 206, 214)"></textarea>
+                  style="resize: none; background: rgb(255, 236, 98)"></textarea>
               </div>
             </div>
           </div>
@@ -125,91 +124,131 @@
       <div class="card-header" role="tab" id="headingPosologia">
         <a class="collapsed" data-toggle="collapse" href="#collapsePosologia"
           aria-expanded="false" aria-controls="collapsePosologia">
-          <h5 class="mb-0">
-            Posología <i class="fas fa-angle-down rotate-icon"></i>
+          <h5 class="mb-0" style="color:#2bbbad">
+            <b>Posología</b> <i class="fas fa-angle-down rotate-icon"></i>
           </h5>
         </a>
       </div>
 
       <!-- Días de la semana -->
-      <div id="collapsePosologia" class="collapse" role="tabpanel" aria-labelledby="headingPosologia">
+      <div id="collapsePosologia" class="collapse show" role="tabpanel" aria-labelledby="headingPosologia">
         <div class="card-body">
-          <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-lunes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
-                aria-controls="nav-lunes" aria-selected="true">Lunes</a>
-              <a class="nav-item nav-link" id="nav-martes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
-                aria-controls="nav-martes" aria-selected="false">Martes</a>
-              <a class="nav-item nav-link" id="nav-miercoes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
-                aria-controls="nav-miercoles" aria-selected="false">Miércoles</a>
-              <a class="nav-item nav-link" id="nav-miercoes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
-                aria-controls="nav-miercoles" aria-selected="false">Jueves</a>
-              <a class="nav-item nav-link" id="nav-miercoes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
-                aria-controls="nav-miercoles" aria-selected="false">Viernes</a>
-              <a class="nav-item nav-link" id="nav-miercoes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
-                aria-controls="nav-miercoles" aria-selected="false">Sábado</a>
-              <a class="nav-item nav-link" id="nav-miercoes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
-                aria-controls="nav-miercoles" aria-selected="false">Domingo</a>
-            </div>
-          </nav>
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-lunes" role="tabpanel" aria-labelledby="nav-lunes-tab">
-              <div class="row mt-3">
-                <!-- Desayuno -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title"><i class="fas fa-coffee"></i><a> Desayuno</a></h4>
-                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque earum
-                        maxime quibusdam voluptatum repellat, alias eligendi, blanditiis iure quos inventore voluptatem
-                        dignissimos eum est praesentium voluptatibus! A, voluptate ipsa.</p>
-                    </div>
-                  </div>
-                </div>
 
-                <!-- Comida -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title"><i class="fas fa-utensils"></i><a> Comida</a></h4>
-                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque earum
-                        maxime quibusdam voluptatum repellat, alias eligendi, blanditiis iure quos inventore voluptatem
-                        dignissimos eum est praesentium voluptatibus! A, voluptate ipsa.</p>
-                    </div>
-                  </div>
-                </div>
+            <ul class="nav nav-tabs nav-justified md-tabs aqua-gradient" id="myTabJust" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab-just" data-toggle="tab" href="#home-just" role="tab" aria-controls="home-just"
+                  aria-selected="true">Lunes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab-just" data-toggle="tab" href="#home-just" role="tab"
+                  aria-controls="profile-just" aria-selected="false">Martes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="contact-tab-just" data-toggle="tab" href="#home-just" role="tab"
+                  aria-controls="contact-just" aria-selected="false">Miércoles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="contact-tab-just" data-toggle="tab" href="#home-just" role="tab"
+                  aria-controls="contact-just" aria-selected="false">Jueves</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="contact-tab-just" data-toggle="tab" href="#home-just" role="tab"
+                  aria-controls="contact-just" aria-selected="false">Viernes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="contact-tab-just" data-toggle="tab" href="#home-just" role="tab"
+                  aria-controls="contact-just" aria-selected="false">Sábado</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="contact-tab-just" data-toggle="tab" href="#home-just" role="tab"
+                  aria-controls="contact-just" aria-selected="false">Domingo</a>
+              </li>
+            </ul>
 
-                <!-- Merieda -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title"><i class="fas fa-apple-alt"></i><a> Merienda</a></h4>
-                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque earum
-                        maxime quibusdam voluptatum repellat, alias eligendi, blanditiis iure quos inventore voluptatem
-                        dignissimos eum est praesentium voluptatibus! A, voluptate ipsa.</p>
-                    </div>
-                  </div>
-                </div>
+            <div class="tab-content pt-5" id="myTabContentJust">
+              <div class="tab-pane fade show active" id="home-just" role="tabpanel" aria-labelledby="home-tab-just">
 
-                <!-- Cena -->
-                <div class="col-md-3">
-                  <div class="card">
-                    <div class="card-body">
-                      <h4 class="card-title"><i class="fas fa-utensils"></i><a> Cena</a></h4>
-                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque earum
-                        maxime quibusdam voluptatum repellat, alias eligendi, blanditiis iure quos inventore voluptatem
-                        dignissimos eum est praesentium voluptatibus! A, voluptate ipsa.</p>
+                <div class="row mt-2">
+
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title text-center"><i class="fas fa-coffee mr-2" style="color:#2bbbad"></i><a> Desayuno</a></h4>
+                        <hr>
+                        <div class="card-text">
+                          <ul>
+                            <li>2 uds. Ibuprofeno 200mg</li>
+                            <li>1/2 uds. Lexatin 10mg</li>
+                            <li>1/4 uds. Sintrón 10mg</li>
+                            <li>3 uds. Sumial 10mg</li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  
+                  
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title text-center"><i class="fas fa-utensils mr-2" style="color:#2bbbad"></i><a> Comida</a></h4>
+                        <hr>
+                        <div class="card-text">
+                          <ul>
+                            <li>2 uds. Ibuprofeno 200mg</li>
+                            <li>1/2 uds. Lexatin 10mg</li>
+                            <li>1/4 uds. Sintrón 10mg</li>
+                            <li>3 uds. Sumial 10mg</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title text-center"><i class="fas fa-apple-alt mr-2"style="color:#2bbbad"></i><a> Merienda</a></h4>
+                        <hr>
+                        <div class="card-text">
+                          <ul>
+                            <li>2 uds. Ibuprofeno 200mg</li>
+                            <li>1/2 uds. Lexatin 10mg</li>
+                            <li>1/4 uds. Sintrón 10mg</li>
+                            <li>3 uds. Sumial 10mg</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title text-center"><i class="fas fa-utensils mr-2"style="color:#2bbbad"></i><a> Cena</a></h4>
+                        <hr>
+                        <div class="card-text">
+                          <ul>
+                            <li>2 uds. Ibuprofeno 200mg</li>
+                            <li>1/2 uds. Lexatin 10mg</li>
+                            <li>1/4 uds. Sintrón 10mg</li>
+                            <li>3 uds. Sumial 10mg</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
 
               </div>
             </div>
-            <!-- <div class="tab-pane fade" id="nav-martes" role="tabpanel" aria-labelledby="nav-martes-tab">...</div>
-            <div class="tab-pane fade" id="nav-miercoles" role="tabpanel" aria-labelledby="nav-miercoes-tab">...</div> -->
-          </div>
+
         </div>
       </div>
+      
     </div>
     <!-- Accordion card -->
   </div>

@@ -20,6 +20,7 @@ import { APP_ROUTING } from './routes/app.routes';
 import { LoginService } from './services/login.service';
 import { ResidenciasService } from './services/residencias.service';
 import { PacientesService } from './services/pacientes.service';
+import { ResultadosBusquedaComponent } from './components/resultados-busqueda/resultados-busqueda.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PacientesService } from './services/pacientes.service';
     ListaResidenciasComponent,
     ListaPacientesComponent,
     PacienteComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    ResultadosBusquedaComponent
   ],
   imports: [
     BrowserModule,

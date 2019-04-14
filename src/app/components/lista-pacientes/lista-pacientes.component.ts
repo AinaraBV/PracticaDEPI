@@ -21,6 +21,7 @@ export class ListaPacientesComponent implements OnInit {
 
   Residencia:Residencia;
   private sorted = false;
+  searchText: string = '';
 
   constructor(
     private tableService: MdbTableService, 
@@ -30,6 +31,7 @@ export class ListaPacientesComponent implements OnInit {
     private route:Router
   ) {}
 
+ 
   ngOnInit() {  
     this.Pacientes = this._pacientes.getPacientes();
     this.Residencia = this._residencia.getResidenciaSeleccionada();
@@ -89,4 +91,8 @@ export class ListaPacientesComponent implements OnInit {
     paciente.selected = true;
     this.route.navigate(['detalle'])
   }
+
+
+
+
 }

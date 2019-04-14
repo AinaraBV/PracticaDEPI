@@ -1,8 +1,8 @@
 <app-navbar></app-navbar>
 
+<app-buscador></app-buscador>
 
-<div class="container" style="margin-top:120px">
-
+<div class="container  animated fadeIn fast" style="margin-top:20px">
 
   <div class="row">
     <a style="display:flex; color: grey" (click)="loadResidencias()">
@@ -47,7 +47,6 @@
                 <th class="th-lg"><a (click)="sortBy('Apellidos')">Apellido <mdb-icon fas icon="sort" class="ml-1"></mdb-icon></a></th>
                 <th class="th-lg"><a (click)="sortBy('Inicio_toma')">Inicio de Toma <mdb-icon fas icon="sort" class="ml-1"></mdb-icon></a></th>
                 <th class="th-lg"><a (click)="sortBy('Fin_toma')">Final de Toma <mdb-icon fas icon="sort" class="ml-1"></mdb-icon></a></th>
-                <th></th>
               </tr>
             </thead>
             <!--Table head-->
@@ -63,16 +62,13 @@
                 <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.Apellidos}}</td>
                 <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.Inicio_toma}}</td>
                 <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.Fin_toma}}</td>
-                <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">
-                  <button mdbBtn color="default" size="sm" rounded="true" gradient="aqua" mdbWavesEffect type="button" class="m-0" (click)="removePaciente(el)"><mdb-icon fas icon="trash-alt"></mdb-icon></button>
-                </td>
               </tr>
             </tbody>
             <!--Table body-->
             
             <tfoot>
               <tr>
-                <td colspan="6">
+                <td colspan="5">
                   <mdb-table-pagination [searchDataSource]="Pacientes" (nextPageClick)="onNextPageClick($event)" (previousPageClick)="onPreviousPageClick($event)"></mdb-table-pagination>
                 </td>
               </tr>
@@ -89,3 +85,5 @@
   </section>
 
 </div>
+
+
