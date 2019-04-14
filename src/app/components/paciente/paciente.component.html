@@ -1,0 +1,234 @@
+<div class="container-fluid">
+
+  <div class="row pt-4">
+
+    <div class="col-md-6" style="align-self: center;">
+      <i class="fas fa-chevron-left fa-2x"></i>Detalle: nombre de paciente
+    </div>
+
+    <div class="col-md-6 text-right">
+      <button type="button" class="btn btn-outline-danger btn-rounded" mdbWavesEffect data-toggle="modal" data-target="#basicExample"
+      (click)="frame.show()"><i
+          class="far fa-trash-alt"></i> Dar de baja</button>
+      <button type="button" class="btn btn-outline-primary btn-rounded" mdbWavesEffect><i class="far fa-edit"></i> Editar
+        paciente</button>
+    </div>
+
+  </div>
+
+  <!--Accordion wrapper-->
+  <div class="accordion md-accordion pt-4" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+    <!-- Accordion card -->
+    <div class="card">
+
+      <!-- Card header -->
+      <div class="card-header" role="tab" id="headingTratamiento">
+        <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseTratamiento" aria-expanded="true"
+          aria-controls="collapseTratamiento">
+          <h5 class="mb-0">
+            Panel de tratamiento <i class="fas fa-angle-down rotate-icon"></i>
+          </h5>
+        </a>
+      </div>
+
+      <!-- Card body -->
+      <div id="collapseTratamiento" class="collapse show" role="tabpanel" aria-labelledby="headingTratamiento"
+        data-parent="#accordionEx">
+        <div class="card-body">
+          <div class="row">
+
+            <div class="col-md-8">
+
+              <div class="row">
+
+                <!-- Nombre y tipo de toma-->
+                <div class="col-md-5">
+                  <div class="md-form">
+                    <input mdbInput type="text" id="inputNombre" class="form-control" disabled>
+                    <label for="inputNombre" class="">Nombre</label>
+                  </div>
+
+                  <div class="md-form">
+                    <input mdbInput type="text" id="inputTipoToma" class="form-control" disabled>
+                    <label for="inputTipoToma" class="">Tipo de toma</label>
+                  </div>
+                </div>
+
+                <!-- Fechas de inicio y fin -->
+                <div class="col-md-5">
+                  <div class="md-form">
+                    <input mdbInput type="date" id="inputInicioToma" class="form-control" disabled>
+                    <label for="inputInicioToma" class="">Inicio de toma</label>
+                  </div>
+
+                  <div class="md-form">
+                    <input mdbInput type="date" id="inputFinToma" class="form-control" disabled>
+                    <label for="inputFinToma" class="">Fin de toma</label>
+                  </div>
+                </div>
+
+                <!-- Chechbox -->
+                <div class="col-md-2 align-self-center">
+                  <div class="custom-control custom-checkbox mb-5">
+                    <input type="checkbox" class="custom-control-input" id="chbxEmblistable" disabled>
+                    <label class="custom-control-label" for="chbxEmblistable">Emblistable</label>
+                  </div>
+
+                  <div class="custom-control custom-checkbox mt-5">
+                    <input type="checkbox" class="custom-control-input" id="chbxBolsaUnica" disabled>
+                    <label class="custom-control-label" for="chbxBolsaUnica">Bolsa única</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- Patologías -->
+                <div class="col-md-12">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsum mollitia error totam
+                    obcaecati, soluta deleniti? Velit in labore, corporis dicta minus necessitatibus est? Distinctio
+                    corporis consequuntur exercitationem beatae sed?</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Notas -->
+            <div class="col-md-4 text-center">
+              <div class="form-group green-border-focus">
+                <label for="textAreaNotas">Notas</label>
+                <textarea class="form-control" id="textAreaNotas" rows="8"
+                  style="resize: none; background: rgb(201, 206, 214)"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Accordion card -->
+
+    <!-- Accordion card -->
+    <div class="card">
+
+      <!-- Card header -->
+      <div class="card-header" role="tab" id="headingPosologia">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapsePosologia"
+          aria-expanded="false" aria-controls="collapsePosologia">
+          <h5 class="mb-0">
+            Posología <i class="fas fa-angle-down rotate-icon"></i>
+          </h5>
+        </a>
+      </div>
+
+      <!-- Días de la semana -->
+      <div id="collapsePosologia" class="collapse" role="tabpanel" aria-labelledby="headingPosologia"
+        data-parent="#accordionEx">
+        <div class="card-body">
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-lunes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
+                aria-controls="nav-lunes" aria-selected="true">Lunes</a>
+              <a class="nav-item nav-link" id="nav-martes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
+                aria-controls="nav-martes" aria-selected="false">Martes</a>
+              <a class="nav-item nav-link" id="nav-miercoes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
+                aria-controls="nav-miercoles" aria-selected="false">Miércoles</a>
+              <a class="nav-item nav-link" id="nav-miercoes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
+                aria-controls="nav-miercoles" aria-selected="false">Jueves</a>
+              <a class="nav-item nav-link" id="nav-miercoes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
+                aria-controls="nav-miercoles" aria-selected="false">Viernes</a>
+              <a class="nav-item nav-link" id="nav-miercoes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
+                aria-controls="nav-miercoles" aria-selected="false">Sábado</a>
+              <a class="nav-item nav-link" id="nav-miercoes-tab" data-toggle="tab" href="#nav-lunes" role="tab"
+                aria-controls="nav-miercoles" aria-selected="false">Domingo</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-lunes" role="tabpanel" aria-labelledby="nav-lunes-tab">
+              <div class="row mt-3">
+                <!-- Desayuno -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title"><i class="fas fa-coffee"></i><a> Desayuno</a></h4>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque earum
+                        maxime quibusdam voluptatum repellat, alias eligendi, blanditiis iure quos inventore voluptatem
+                        dignissimos eum est praesentium voluptatibus! A, voluptate ipsa.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Comida -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title"><i class="fas fa-utensils"></i><a> Comida</a></h4>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque earum
+                        maxime quibusdam voluptatum repellat, alias eligendi, blanditiis iure quos inventore voluptatem
+                        dignissimos eum est praesentium voluptatibus! A, voluptate ipsa.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Merieda -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title"><i class="fas fa-apple-alt"></i><a> Merienda</a></h4>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque earum
+                        maxime quibusdam voluptatum repellat, alias eligendi, blanditiis iure quos inventore voluptatem
+                        dignissimos eum est praesentium voluptatibus! A, voluptate ipsa.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Cena -->
+                <div class="col-md-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title"><i class="fas fa-utensils"></i><a> Cena</a></h4>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque earum
+                        maxime quibusdam voluptatum repellat, alias eligendi, blanditiis iure quos inventore voluptatem
+                        dignissimos eum est praesentium voluptatibus! A, voluptate ipsa.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- <div class="tab-pane fade" id="nav-martes" role="tabpanel" aria-labelledby="nav-martes-tab">...</div>
+            <div class="tab-pane fade" id="nav-miercoles" role="tabpanel" aria-labelledby="nav-miercoes-tab">...</div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Accordion card -->
+  </div>
+  <!-- Accordion wrapper -->
+</div>
+
+<!-- Modal eliminar usuario-->
+<div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">¿Está seguro de que desea eliminar el paciente?</p>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <i class="fas fa-times fa-4x animated rotateIn"></i>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a mdbBtn color="danger" outline="true" class="waves-effect" (click)="frame.hide()" mdbWavesEffect>Cancelar</a>
+        <a type="button" mdbBtn color="danger" class="waves-effect" mdbWavesEffect data-dismiss="modal">Confirmar</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
