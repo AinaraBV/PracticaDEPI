@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+
+<app-buscador></app-buscador>
+
+<div class="container" style="margin-top:20px">
+
+  <h4>Listado de residencias</h4>
+
+  <hr>
+
+  <div class="alert alert-info animated fadeIn fast" role="alert" *ngIf="residenciasEncontradas.length == 0">
+    No existen residencias para el término '{{termino}}'.
+  </div>
+
+  <div class="card mb-3 select-card animated fadeIn fast" mdbWavesEffect *ngFor="let res of residenciasEncontradas" (click)="loadPacientes(res)">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="img" [ngStyle]="loadImage(res)"></div>
+      </div>
+      <div class="col-md-9">
+        <div class="card-body">
+          <h5 class="card-title">{{res.Nombre}}</h5>
+          <hr>
+          <div class="row">
+            <div class="col-sm-4 item-info">
+              <b>
+                <mdb-icon class="text-aqua" fas icon="map-marker-alt"></mdb-icon>
+              </b>
+              <h6 class="card-text margin-icon">{{res.localizacion}}</h6>
+            </div>
+            <div class="col-sm-2 item-info">
+              <b>
+                <mdb-icon class="text-aqua" fas icon="phone"></mdb-icon>
+              </b>
+              <h6 class="card-text margin-icon">{{res.telefono}}</h6>
+            </div>
+            <div class="col-sm-4 item-info">
+              <b>
+                <mdb-icon class="text-aqua" fas icon="envelope"></mdb-icon>
+              </b>
+              <h6 class="card-text margin-icon">{{res.email}}</h6>
+            </div>
+            <div class="col-sm-2 item-info">
+              <b>
+                <mdb-icon class="text-aqua" fas icon="users"></mdb-icon>
+              </b>
+              <h6 class="card-text margin-icon">{{res.numero}}</h6>
+            </div>
+          </div>
+          <p class="card-text"><small class="text-muted">Actualizada por última vez: hace {{res.last_update}}</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

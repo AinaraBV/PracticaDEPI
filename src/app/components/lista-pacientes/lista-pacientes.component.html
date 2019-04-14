@@ -1,0 +1,89 @@
+<app-navbar></app-navbar>
+
+<app-buscador></app-buscador>
+
+<div class="container  animated fadeIn fast" style="margin-top:20px">
+
+  <div class="row">
+    <a style="display:flex; color: grey" (click)="loadResidencias()">
+      <mdb-icon size="2x" fas icon="chevron-left" class="mr-2"></mdb-icon>
+      <h5 class="mt-1">Residencia {{Residencia?.Nombre}}</h5>
+    </a>
+  </div>
+
+
+  <section class="mt-5">
+  <!-- Table with panel -->
+    <div class="card card-cascade narrower">
+
+      <!--Card image-->
+      <div class="view view-cascade gradient-card-header aqua-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+
+        
+        <h5 class="white-text mx-3" style="margin:0px"><b>Listado de Pacientes</b></h5>
+
+        <div>
+          <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-4" mdbWavesEffect (click)="sortBy('Changed')">
+            <mdb-icon fas icon="sort" class="mr-1"></mdb-icon> Ordenar Cambios 
+          </button>
+          <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-4" disabled mdbWavesEffect>
+            <mdb-icon fas icon="plus" class="mr-1"></mdb-icon> Añadir Paciente
+          </button>
+        </div>
+
+      </div>
+      <!--/Card image-->
+      <div class="px-4">
+
+        <div class="table-wrapper">
+          <!--Table-->
+          <table mdbTable hover="true">
+    
+            <!--Table head-->
+            <thead>
+              <tr>
+                <th class="th-sm"></th>
+                <th class="th-lg"><a (click)="sortBy('Nombre')">Nombre <mdb-icon fas icon="sort" class="ml-1"></mdb-icon></a></th>
+                <th class="th-lg"><a (click)="sortBy('Apellidos')">Apellido <mdb-icon fas icon="sort" class="ml-1"></mdb-icon></a></th>
+                <th class="th-lg"><a (click)="sortBy('Inicio_toma')">Inicio de Toma <mdb-icon fas icon="sort" class="ml-1"></mdb-icon></a></th>
+                <th class="th-lg"><a (click)="sortBy('Fin_toma')">Final de Toma <mdb-icon fas icon="sort" class="ml-1"></mdb-icon></a></th>
+              </tr>
+            </thead>
+            <!--Table head-->
+    
+            <!--Table body-->
+            <tbody>
+              <tr *ngFor="let el of Pacientes; let i = index" class="selectable-row" (click)="selectPaciente(el)">
+                <th *ngIf="i+1 >= firstItemIndex && i < lastItemIndex" scope="row" style="text-align:center">
+                  <mdb-icon size="2x" fas icon="check" *ngIf="el.Changed==0" class="color-icon"></mdb-icon>
+                  <mdb-icon size="2x" fas icon="exclamation" *ngIf="el.Changed==1" class="color-icon-warn"></mdb-icon>
+                </th>
+                <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.Nombre}}</td>
+                <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.Apellidos}}</td>
+                <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.Inicio_toma}}</td>
+                <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.Fin_toma}}</td>
+              </tr>
+            </tbody>
+            <!--Table body-->
+            
+            <tfoot>
+              <tr>
+                <td colspan="5">
+                  <mdb-table-pagination [searchDataSource]="Pacientes" (nextPageClick)="onNextPageClick($event)" (previousPageClick)="onPreviousPageClick($event)"></mdb-table-pagination>
+                </td>
+              </tr>
+            </tfoot>
+
+          </table>
+          <!--Table-->
+        </div>
+    
+      </div>
+    
+    </div>
+    <!-- Table with panel -->
+  </section>
+
+</div>
+
+

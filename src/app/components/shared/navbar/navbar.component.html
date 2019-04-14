@@ -1,0 +1,110 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-md navbar-dark default-color fixed-top" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    
+    <mdb-navbar-brand >
+      
+      <a class="navbar-brand icon-brand">
+        <img src="../../../assets/hospital.svg" height="30" class="d-inline-block align-top">
+        Pharmagest
+      </a>
+    </mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>Ventas</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link waves-light" mdbWavesEffect>Pacientes<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>Pedidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>Informes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>Stock</a>
+        </li>
+  
+      </ul>
+
+      <!-- Links -->
+  
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            Bienvenido, {{User?.Nombre}}  <span class="caret"></span></a>
+          <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" style="width:350px">
+            <div class="row">
+              <div class="col-md-4" style="margin-left: 20px">
+                  <img src="{{User?.img}}" alt="" class="img-fluid rounded-circle z-depth-0">
+              </div>
+              <div class="col-md-7 vcenter">
+                  <h5>{{User?.Nombre}}</h5>
+                  <h5>{{User?.Apellidos}}</h5>
+                  <span>{{User?.rol}}</span>
+              </div>
+            </div>
+            <div class="divider dropdown-divider"></div>
+            <div class="row">
+              <div class="col-md-7 hcenter">
+                  <a class="text-dropdown">
+                      <mdb-icon fas icon="cog" class="mr-1"></mdb-icon>Configuración
+                  </a>
+              </div>
+              <div class="col-md-4 hcenter">
+                  <a class="text-dropdown">
+                      <mdb-icon fas icon="info" class="mr-1"></mdb-icon>Ayuda
+                  </a>
+              </div>
+            </div>
+            <div class="row close-session">
+              <div class="col-md-12 hcenter">
+                <button mdbBtn type="button" class="aqua-gradient" rounded="true" size="sm" data-toggle="modal" data-target="#basicExample" (click)="frame.show()" mdbWavesEffect>
+                    <mdb-icon fas icon="sign-out-alt" class="mr-1"></mdb-icon>Cerrar Sesión
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </links>
+    <!-- Collapsible content -->
+  
+  </mdb-navbar>
+  <!--/.Navbar-->
+
+
+<div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content text-center">
+      <!--Header-->
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">Cerrar Sesión</p>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <h5><b>{{User?.Nombre}} vas a salir de la aplicación</b></h5>
+        <h5>¿Estás seguro de que quieres salir?</h5>
+        <i style="color:#2bbbad" class="fas fa-times fa-4x animated rotateIn"></i>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a mdbBtn color="default" outline="true" class="waves-effect" mdbWavesEffect (click)="closeSession()">Si</a>
+        <a type="button" mdbBtn color="default" outline="true" class="waves-effect" mdbWavesEffect data-dismiss="modal" (click)="frame.hide()">No</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
