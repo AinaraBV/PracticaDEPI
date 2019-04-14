@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ListaResidenciasComponent } from './components/lista-residencias/lista-residencias.component'
 import { ListaPacientesComponent } from './components/lista-pacientes/lista-pacientes.component';
+import { PacienteComponent } from './components/paciente/paciente.component';
 
 //Rutas
 import { APP_ROUTING } from './routes/app.routes';
@@ -26,7 +27,8 @@ import { PacientesService } from './services/pacientes.service';
     NavbarComponent,
     LoginFormComponent,
     ListaResidenciasComponent,
-    ListaPacientesComponent
+    ListaPacientesComponent,
+    PacienteComponent
   ],
   imports: [
     BrowserModule,

@@ -50,3 +50,9 @@
 .color-icon-warn {
     color:#ec830a;
 }
+
+.selectable-row{
+    &:hover{
+        cursor:pointer;
+    }
+}

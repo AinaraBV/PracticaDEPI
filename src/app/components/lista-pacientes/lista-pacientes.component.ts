@@ -22,7 +22,13 @@ export class ListaPacientesComponent implements OnInit {
   Residencia:Residencia;
   private sorted = false;
 
-  constructor(private tableService: MdbTableService, private cdRef: ChangeDetectorRef, private _pacientes: PacientesService, private _residencia: ResidenciasService, private route:Router) {}
+  constructor(
+    private tableService: MdbTableService, 
+    private cdRef: ChangeDetectorRef, 
+    private _pacientes: PacientesService, 
+    private _residencia: ResidenciasService, 
+    private route:Router
+  ) {}
 
   ngOnInit() {  
     this.Pacientes = this._pacientes.getPacientes();
@@ -79,4 +85,8 @@ export class ListaPacientesComponent implements OnInit {
     this._pacientes.removeOne(paciente);
   }
 
+  selectPaciente(paciente:Paciente){
+    paciente.selected = true;
+    this.route.navigate(['detalle'])
+  }
 }

@@ -54,7 +54,7 @@
     
             <!--Table body-->
             <tbody>
-              <tr *ngFor="let el of Pacientes; let i = index">
+              <tr *ngFor="let el of Pacientes; let i = index" class="selectable-row" (click)="selectPaciente(el)">
                 <th *ngIf="i+1 >= firstItemIndex && i < lastItemIndex" scope="row" style="text-align:center">
                   <mdb-icon size="2x" fas icon="check" *ngIf="el.Changed==0" class="color-icon"></mdb-icon>
                   <mdb-icon size="2x" fas icon="exclamation" *ngIf="el.Changed==1" class="color-icon-warn"></mdb-icon>
